@@ -29,5 +29,5 @@ zip -r "$OUT"/irsb_fuzzer_seed_corpus.zip corpus
 
 # Build fuzzers in $OUT
 for fuzzer in $(find $SRC -name '*_fuzzer.py'); do
-  compile_python_fuzzer "$fuzzer" --add-binary="pyvex/lib/libpyvex.so:pyvex/lib" --hidden=import archinfo
+  compile_python_fuzzer "$fuzzer" --add-binary="pyvex/lib/libpyvex.so:pyvex/lib" --hidden-import archinfo
 done
